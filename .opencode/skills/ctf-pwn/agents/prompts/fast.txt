@@ -1,0 +1,7 @@
+# Fast Execution Profile
+
+Use this only for a light first pass.
+
+- Triage protections and input surface quickly.
+- Aim for one small primitive check, not a full exploit chain.
+- If the crash shape or primitive is unclear, stop and preserve evidence for standard follow-up.

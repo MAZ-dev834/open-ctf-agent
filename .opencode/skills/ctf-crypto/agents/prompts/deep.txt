@@ -1,0 +1,7 @@
+# Deep Execution Profile
+
+Use this when prior runs failed, the oracle is noisy, or the math path is already partially known.
+
+- Stabilize the protocol or query budget before deeper inference.
+- Narrow the branch with independent evidence: equation count, leakage class, or search-space reduction.
+- Only escalate to heavier math or external research after the capability model is explicit.

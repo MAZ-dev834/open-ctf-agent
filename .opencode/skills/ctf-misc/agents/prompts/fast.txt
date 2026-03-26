@@ -1,0 +1,7 @@
+# Fast Execution Profile
+
+Use this only for a light first pass.
+
+- Triage artifacts and choose one primary representation.
+- Extract one concrete signal quickly.
+- Avoid branching into multiple tool families before there is a reproducible lead.

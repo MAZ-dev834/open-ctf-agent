@@ -1,0 +1,4 @@
+interface:
+  display_name: "CTF Web Profiles"
+  short_description: "Execution-profile templates for the main ctf-web agent"
+  default_prompt: "Metadata only. The pipeline selects one execution profile for the main ctf-web agent."

@@ -1,0 +1,5 @@
+OSINT Category Addendum
+
+- Search first, but keep searches clue-driven: entity, platform, location, timestamp, handle, or media detail.
+- Cross-validate with at least two independent public sources before finalizing.
+- Do not spend long on local speculation when a public-evidence pivot is available.

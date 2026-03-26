@@ -1,0 +1,37 @@
+# Runtime / generated
+workspace/
+events/
+runtime/
+ctf-work/
+logs/
+tasks/
+
+# External/vendor/tools
+external/
+.opencode/node_modules/
+
+# Generated analytics / indices
+shared/ctf-index/
+shared/tool-catalog/
+shared/skill-memory/benchmark_history.jsonl
+shared/skill-memory/memory_index.jsonl
+shared/skill-memory/memory_index.jsonl.bak
+shared/skill-memory/failure-patterns-auto.json
+shared/skill-memory/failure-patterns-auto.md
+
+# Caches
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Secrets / local config
+*.env
+.env
+.opencode/opencode.local.json

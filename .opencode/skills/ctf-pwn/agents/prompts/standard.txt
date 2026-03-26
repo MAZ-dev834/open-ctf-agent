@@ -1,0 +1,7 @@
+# Standard Execution Profile
+
+Use this as the default pwn posture.
+
+- Confirm protections, bug class, and one stable primitive first.
+- Prefer leak/read/write/control in that order over premature gadget hunting.
+- Keep the exploit path reproducible locally before remote closure.

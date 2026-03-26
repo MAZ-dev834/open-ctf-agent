@@ -1,0 +1,5 @@
+# Compatibility Alias
+
+Legacy alias for `deep.txt`.
+
+Use `deep.txt` as the primary execution-profile template.

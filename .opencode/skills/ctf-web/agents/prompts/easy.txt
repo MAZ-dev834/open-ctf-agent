@@ -1,0 +1,5 @@
+# Compatibility Alias
+
+Legacy alias for `fast.txt`.
+
+Use `fast.txt` as the primary execution-profile template.

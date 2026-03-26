@@ -1,0 +1,7 @@
+# Deep Execution Profile
+
+Use this when prior runs already produced artifacts but not a stable solve path.
+
+- Re-evaluate the strongest representation using existing evidence first.
+- Search the exact blocked format, protocol, or transform behavior if external retrieval is needed.
+- Keep branch count low and close stale representations aggressively.

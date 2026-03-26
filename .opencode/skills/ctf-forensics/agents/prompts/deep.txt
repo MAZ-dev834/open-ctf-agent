@@ -1,0 +1,7 @@
+# Deep Execution Profile
+
+Use this when prior extraction attempts failed or the artifact chain is layered and stubborn.
+
+- Reconstruct the artifact graph or traffic/process timeline before trying more tools.
+- Search the blocked parser/file-format/protocol behavior, not the challenge title.
+- Keep branch count low: one primary lane, one fallback lane, then verify and close.

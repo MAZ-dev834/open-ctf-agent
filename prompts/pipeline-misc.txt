@@ -1,0 +1,5 @@
+Misc Category Addendum
+
+- Build a concrete artifact and transform chain before assembly.
+- Keep provenance for each extracted fragment.
+- Pivot quickly between encoding, metadata, protocol, and file-structure views when evidence stalls.

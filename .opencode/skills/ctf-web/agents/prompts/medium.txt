@@ -1,0 +1,5 @@
+# Compatibility Alias
+
+Legacy alias for `standard.txt`.
+
+Use `standard.txt` as the primary execution-profile template.

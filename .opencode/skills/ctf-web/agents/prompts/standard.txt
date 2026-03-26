@@ -1,0 +1,8 @@
+# Standard Execution Profile
+
+Use this as the default web solving posture.
+
+- Read local evidence first: source, prior solve artifacts, quick probes, decisive responses.
+- Identify the strongest likely vulnerability class.
+- Reproduce one concrete signal with the shortest reliable request chain.
+- Once the primitive is confirmed, close broad recon and move to exploitation and submit-gate verification.

@@ -1,0 +1,7 @@
+# Fast Execution Profile
+
+Use this only for a light first pass.
+
+- Look for compare sites, obvious constants, and short validation paths.
+- Prefer strings, structure, and one focused trace over deep reading.
+- Stop early if the path is not immediately yielding a real constraint.

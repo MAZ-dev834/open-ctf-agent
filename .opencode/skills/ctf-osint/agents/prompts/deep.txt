@@ -1,0 +1,7 @@
+# Deep Execution Profile
+
+Use this when the clue graph is ambiguous or prior searches were noisy.
+
+- Write down the exact blocked pivot: account, domain, image region, timeline gap, or location conflict.
+- Search that blocked pivot with source-quality filters and archive-aware verification.
+- Close weak branches aggressively and keep only the strongest candidate plus one corroboration path.

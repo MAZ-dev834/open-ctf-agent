@@ -1,0 +1,7 @@
+# Standard Execution Profile
+
+Use this as the default crypto posture.
+
+- Identify the primitive and write down the capability model first.
+- Recover one concrete equation, leak, or distinguisher before solver expansion.
+- Keep the solver deterministic and verify every reimplementation step against the original behavior.

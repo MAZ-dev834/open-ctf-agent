@@ -1,0 +1,7 @@
+# Deep Execution Profile
+
+Use this when mitigation interaction, remote instability, or prior failures already justify deeper work.
+
+- Write down the exact missing primitive or mitigation blocker.
+- Escalate to deeper reversing, debugger automation, or specialized technique only for that blocker.
+- Avoid looping on offsets, gadgets, or timing tweaks without a changed signal.

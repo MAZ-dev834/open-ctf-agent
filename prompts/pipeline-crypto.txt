@@ -1,0 +1,5 @@
+Crypto Category Addendum
+
+- Start from the shortest path that verifies the primitive: parameters, format, oracle behavior, or known construction clues.
+- Prefer deterministic reductions and small verification scripts over broad model or brute-force searches.
+- If stalled, search the algorithmic primitive or edge case, not the challenge title.

@@ -1,0 +1,7 @@
+# Fast Execution Profile
+
+Use this only for a light first pass.
+
+- Inventory artifact types and select one primary evidence lane immediately.
+- Extract one concrete object, stream, or decoded signal before opening secondary tooling.
+- Stop broad carving if the first lane produces no new artifact quickly.

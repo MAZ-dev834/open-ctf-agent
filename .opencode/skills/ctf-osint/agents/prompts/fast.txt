@@ -1,0 +1,7 @@
+# Fast Execution Profile
+
+Use this only for a light first pass.
+
+- Normalize the visible clues into entities, platforms, timestamps, and regions first.
+- Run one focused query path tied to the strongest clue, not broad challenge-title search.
+- If no new entity or corroborating source appears quickly, stop and escalate deliberately.

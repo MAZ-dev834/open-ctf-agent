@@ -1,0 +1,7 @@
+# Standard Execution Profile
+
+Use this as the default reversing posture.
+
+- Work backward from verdict and compare sites.
+- Recover one concrete transform or constraint, then build a verified reimplementation.
+- Use dynamic checks only to resolve uncertainty, not as the default main path.

@@ -1,0 +1,7 @@
+# Standard Execution Profile
+
+Use this as the default OSINT posture.
+
+- Build a short query plan from explicit clues before searching.
+- Search the stalled entity, platform, image, or location clue directly, not the event/challenge title.
+- As soon as one candidate becomes strongest, switch to evidence-chain verification with timestamps and corroboration.

@@ -1,0 +1,7 @@
+# Standard Execution Profile
+
+Use this as the default forensics posture.
+
+- Start from provenance: container layers, timestamps, stream/object boundaries, and expected flag shape.
+- Work one evidence lane at a time until you recover a concrete artifact, signal, or trace.
+- Once a decisive artifact appears, switch from triage to reproducible extraction and closure.

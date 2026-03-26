@@ -1,0 +1,8 @@
+# Deep Execution Profile
+
+Use this when the challenge has prior failures, higher interaction risk, or a confirmed but stubborn blocker.
+
+- Reconstruct the exact state machine and request chain before trying new payload families.
+- Search the blocked framework/parser behavior, not the challenge title.
+- Prefer evidence-backed escalation: source dive, narrow external research, then controlled exploit refinement.
+- Keep the branch count low and close weak paths aggressively.

@@ -1,0 +1,15 @@
+Pipeline Runtime Baseline
+
+- Treat attached `task.json`, `challenge_context.json`, `pipeline_env.json`, and `pipeline_env.sh` as the primary session context.
+- Use `CTFD_CHALLENGE_DIR` or `challenge_context.json.challenge_dir` as the only workspace root for this run.
+- Do not re-run ingest or create a new timestamped workspace in pipeline mode.
+- Collect reproducible evidence yourself before asking the user. This includes local files, HTTP responses, nc transcripts, command output, and artifacts already reachable from the workspace or target.
+- Only ask the user for missing items that are genuinely external: credentials, expired or unreachable instances, or assets not present locally.
+- If `todowrite` is available, create or refresh a concrete todo list at session start. Keep only 3-5 actionable todos tied to the current main blocker.
+- Do not proceed with broad reconnaissance, brute forcing, or wide search until the current blocker and first todo set are explicit.
+- When the blocker changes, close stale todos and rewrite the list before continuing.
+- If stalled, translate the stall into one precise technical question and search that technical point first. Do not default to challenge-title or event-title searches.
+- Prefer the strongest same-challenge history and concrete local artifacts before broad recon.
+- Use local helper scripts when they reduce uncertainty, but do not let helper usage replace direct reasoning and verification.
+- Keep progress evidence-driven: hypothesis, action, result, next step.
+- Validate candidate flags before promoting them to `flag.txt` or `writeup.md`.

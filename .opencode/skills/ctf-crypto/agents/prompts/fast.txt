@@ -1,0 +1,7 @@
+# Fast Execution Profile
+
+Use this only for a quick first pass.
+
+- Extract primitive hints, parameters, and attacker capability.
+- Run one short falsifiable check for the main weakness.
+- Do not expand into multiple attack families without a concrete equation or leak.

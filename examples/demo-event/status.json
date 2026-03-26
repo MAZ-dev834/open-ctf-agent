@@ -1,0 +1,9 @@
+{
+  "1": {
+    "id": 1,
+    "name": "Demo HTTP Challenge",
+    "category": "Web",
+    "solved": false,
+    "challenge_dir": "examples/demo-event/Web/01_demo-http"
+  }
+}

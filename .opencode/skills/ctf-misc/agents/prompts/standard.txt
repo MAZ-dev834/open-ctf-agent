@@ -1,0 +1,7 @@
+# Standard Execution Profile
+
+Use this as the default misc posture.
+
+- Work one primary representation at a time.
+- Build a reproducible transformation chain with preserved intermediate artifacts.
+- If the challenge becomes clearly crypto/rev/pwn/osint, hand off that blocker instead of bloating misc.

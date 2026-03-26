@@ -1,0 +1,5 @@
+Web Category Addendum
+
+- Reproduce the request chain yourself and save decisive responses under `logs/`.
+- Prefer targeted probes over broad fuzzing once a likely vulnerability class is visible.
+- For stalled searches, query the stack, parser, framework behavior, or vulnerability primitive rather than the challenge name.

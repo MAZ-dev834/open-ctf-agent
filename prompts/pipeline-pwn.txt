@@ -1,0 +1,5 @@
+Pwn Category Addendum
+
+- Prefer fast local triage first: file, checksec, strings, objdump, gdb batch checks, short pwntools probes.
+- Escalate to heavier tooling only when the first focused local pass does not reveal the primitive.
+- Record concrete exploit predictions before broad experimentation.

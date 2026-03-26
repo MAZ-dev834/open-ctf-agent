@@ -1,0 +1,5 @@
+Rev Category Addendum
+
+- Prefer direct local reversing first: file, strings, readelf, objdump, quick disassembly, and focused tracing.
+- Treat decompiler/MCP-heavy paths as escalation, not mandatory first steps.
+- Lock onto compare paths, constraints, and transformations before wider exploration.

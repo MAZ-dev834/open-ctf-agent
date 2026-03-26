@@ -1,0 +1,8 @@
+# Fast Execution Profile
+
+Use this only for a light first pass.
+
+- Read source or the most relevant local artifact first.
+- Build one main hypothesis and one quick falsifier.
+- Prefer one minimal request chain over broad fuzzing.
+- If no concrete signal appears quickly, stop expanding and hand control back to standard/deeper follow-up.

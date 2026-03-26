@@ -1,0 +1,9 @@
+题目名称: Demo Project
+类别: Misc
+Flag 格式: demo{...}
+需要启动容器: 否
+容器地址:
+描述:
+最小 project 样例，用于本地测试 evidence、checkpoint 和 artifact 工具。
+目标地址或附件:
+- attachments/example.txt

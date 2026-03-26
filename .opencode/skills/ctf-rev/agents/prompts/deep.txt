@@ -1,0 +1,7 @@
+# Deep Execution Profile
+
+Use this when the target is already partially understood but the solve path still stalls.
+
+- Reduce the problem to constraints, state transitions, or VM semantics.
+- Use heavier tooling only after the current blocker is explicit.
+- Keep one main reimplementation path and verify it frequently against the target.

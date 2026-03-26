@@ -1,0 +1,5 @@
+Forensics Category Addendum
+
+- Triage artifact type first, then choose the narrowest deterministic extraction path.
+- Prefer metadata, strings, container structure, and protocol evidence before broad tool sweeps.
+- Save extraction output paths and offsets so the chain can be replayed.

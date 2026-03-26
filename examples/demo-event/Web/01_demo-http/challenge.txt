@@ -1,0 +1,10 @@
+题目名称: Demo HTTP Challenge
+类别: Web
+Flag 格式: demo{...}
+需要启动容器: 否
+容器地址:
+描述:
+这是一个脱敏样例，只用于展示 challenge 目录结构。
+不要把它当作真实可利用靶机。
+目标地址或附件:
+- https://example.invalid/demo

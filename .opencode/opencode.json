@@ -1,0 +1,185 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "ctf",
+  "permission": {
+    "external_directory": {
+      "*": "allow"
+    },
+    "bash": "allow",
+    "edit": {
+      "*": "allow"
+    },
+    "write": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "skill": "allow",
+    "lsp": "allow",
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "grep": "allow",
+    "glob": {
+      "*": "allow"
+    },
+    "list": {
+      "*": "allow"
+    },
+    "todowrite": "allow",
+    "todoread": "allow"
+  },
+  "command": {
+    "ctf-quick-scan": {
+      "template": "对指定题目执行快速扫描。若提供参数 $ARGUMENTS，则将其视为题目目录名，路径为 ./workspace/active/$ARGUMENTS 。依次运行：\\npython3 scripts/core/crypto_quick_scan.py --project ./workspace/active/$ARGUMENTS\\npython3 scripts/core/misc_quick_scan.py --project ./workspace/active/$ARGUMENTS\\n输出扫描摘要与下一步建议。若未提供参数，先询问题目目录名。",
+      "description": "Run crypto/misc quick scans"
+    },
+    "ctf-web-probe": {
+      "template": "执行 Web 快速探测。若参数 $ARGUMENTS 以 http(s):// 开头，则运行：\\npython3 scripts/core/web_quick_probe.py --url $ARGUMENTS\\n否则将其视为题目目录名并运行：\\npython3 scripts/core/web_quick_probe.py --project ./workspace/active/$ARGUMENTS\\n输出探测摘要与下一步建议。若未提供参数，先询问 URL 或题目目录名。",
+      "description": "Run web quick probe"
+    },
+    "ctf-preflight": {
+      "template": "对当前公开仓库执行预检。若提供参数 $ARGUMENTS，则运行：\\n./scripts/ops/ctf_preflight.sh --event-dir $ARGUMENTS\\n否则运行：\\n./scripts/ops/ctf_preflight.sh --require-auth 0 --check-mcp 0\\n输出预检摘要与需要修复的项目。",
+      "description": "Run ctf_preflight"
+    }
+  },
+  "mcp": {
+    "ctf-radare2": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "./workspace/active:/workspace",
+        "radare2-mcp:latest"
+      ],
+      "enabled": false
+    },
+    "ctf-ghidra": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "./workspace/active:/workspace",
+        "ghidra-mcp:latest"
+      ],
+      "enabled": false
+    },
+    "ctf-gdb": {
+      "type": "local",
+      "command": [
+        "python3",
+        "-m",
+        "gdb_mcp_server"
+      ],
+      "enabled": false
+    }
+  },
+  "agent": {
+    "ctf": {
+      "description": "CTF orchestrator: classify problem, delegate to specialist agents, verify and report flag with steps",
+      "prompt": "{file:../prompts/ctf-main.txt}",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "write": true,
+        "webfetch": true,
+        "websearch": true
+      }
+    },
+    "ctf-web": {
+      "description": "Web: identify stack/vuln, reproduce, script, and extract flag",
+      "prompt": "{file:../prompts/ctf-web.txt}",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "write": true,
+        "webfetch": true,
+        "websearch": true
+      }
+    },
+    "ctf-pwn": {
+      "description": "Pwn: triage, find bug, craft exploit, get flag",
+      "prompt": "{file:../prompts/ctf-pwn.txt}",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "write": true,
+        "webfetch": true,
+        "websearch": true
+      }
+    },
+    "ctf-crypto": {
+      "description": "Crypto: identify scheme, model, solve, recover flag",
+      "prompt": "{file:../prompts/ctf-crypto.txt}",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "write": true,
+        "webfetch": true,
+        "websearch": true
+      }
+    },
+    "ctf-rev": {
+      "description": "Rev: analyze binary, recover logic, extract flag",
+      "prompt": "{file:../prompts/ctf-rev.txt}",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "write": true,
+        "webfetch": true,
+        "websearch": true
+      }
+    },
+    "ctf-misc": {
+      "description": "Misc: file forensics, stego, encoding, protocols",
+      "prompt": "{file:../prompts/ctf-misc.txt}",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "write": true,
+        "webfetch": true,
+        "websearch": true
+      }
+    },
+    "ctf-forensics": {
+      "description": "Forensics: analyze disk/memory/pcap/media artifacts and recover flag",
+      "prompt": "{file:../prompts/ctf-forensics.txt}",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "write": true,
+        "webfetch": true,
+        "websearch": true
+      }
+    },
+    "ctf-osint": {
+      "description": "OSINT: identify people/places/objects with public sources and evidence",
+      "prompt": "{file:../prompts/ctf-osint.txt}",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "write": true,
+        "webfetch": true,
+        "websearch": true
+      }
+    },
+    "ctf-malware": {
+      "description": "Malware: recover behavior, config, and embedded secrets from suspicious samples",
+      "prompt": "{file:../prompts/ctf-malware.txt}",
+      "tools": {
+        "bash": true,
+        "edit": true,
+        "write": true,
+        "webfetch": true,
+        "websearch": true
+      }
+    }
+  }
+}
