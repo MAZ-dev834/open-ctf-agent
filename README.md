@@ -2,6 +2,27 @@
 
 `open-ctf-agent` 是一个面向 CTF 的研究型 agent 仓库。它保留了比赛主 pipeline、specialist prompts、learn/memory 框架和 MCP 接入口，但不包含任何真实赛事数据、个人工作区或作者本地运行环境。
 
+面向已经会自己搭本地环境、希望复用一套 `CTFd -> pipeline -> submit gate` 自动化骨架的使用者。
+
+## 一眼看懂
+
+- 这不是托管平台，也不是零配置 SaaS。
+- 这是一个可开源、可二次改造的 CTF agent 骨架仓库。
+- 主路径已经收敛到：抓题、路由 specialist、运行 session、提交门禁、证据留痕。
+- 完整跑主 pipeline 前，你需要本地先安装 `opencode` CLI。
+
+适合你：
+
+- 你想要一套可改造的 CTF 自动化主流程，而不是单个 prompt。
+- 你能接受自己配置模型、`opencode`、CTFd 凭据和可选工具链。
+- 你准备在自己的比赛环境里继续迭代。
+
+不适合你：
+
+- 你要的是 clone 后零配置直接开跑。
+- 你不打算安装 `opencode`。
+- 你只想要单题 solver 模板，而不是一整套比赛 pipeline。
+
 ## 仓库定位
 
 - 这是研究仓库，不是即开即用的托管平台。
@@ -28,12 +49,13 @@
 - `ctf-work/`
 - `external/`
 
-## 安装
+## 5 分钟起步
 
 先确认你本地已经安装 `opencode` CLI。这个仓库不会自动安装它。
 
 ```bash
 ./scripts/ops/setup_env.sh
+./scripts/ops/ctf_preflight.sh --require-auth 0 --check-mcp 0
 ```
 
 如果你要使用 attach 模式或本地服务模式，再启动：
@@ -42,11 +64,7 @@
 opencode serve
 ```
 
-如果只想先看脚本和样例，不需要先准备真实比赛数据。
-
-## Quick Start
-
-查看 CLI：
+如果你只想先确认仓库结构和入口是否正常，可直接看这些命令：
 
 ```bash
 python3 scripts/ctfd/fetch_ctfd.py --help
@@ -61,10 +79,14 @@ python3 scripts/submit/ctf_pipeline_submit_gate.py --help
 find examples/demo-event -maxdepth 3 -type f | sort
 ```
 
-对本地环境做一次基础检查：
+## 主路径
 
-```bash
-./scripts/ops/ctf_preflight.sh --require-auth 0 --check-mcp 0
+```text
+fetch_ctfd.py
+  -> ctfd_pipeline.py
+    -> specialist agent / opencode session
+      -> ctf_pipeline_submit_gate.py
+        -> submit_flag.py
 ```
 
 ## 第三方模型 API
